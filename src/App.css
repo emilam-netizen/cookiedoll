@@ -1,0 +1,139 @@
+:root {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #111827;
+  background: #f3f4f6;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+/*
+#root {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 2rem 1rem;
+}
+*/
+.app h1 {
+  margin: 0;
+}
+
+.subtitle {
+  color: #4b5563;
+  margin: 0.5rem 0 1rem;
+}
+
+.panel {
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  padding: 0.5rem;
+}
+
+.flora-demo {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: 1fr;
+}
+
+.flora-source {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  min-height: 72px;
+}
+
+.flora-slots {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+.flora-slot {
+  align-items: center;
+  background: #f8fafc;
+  border: 2px dashed #cbd5e1;
+  border-radius: 10px;
+  color: #64748b;
+  display: flex;
+  justify-content: center;
+  min-height: 72px;
+  padding: 0.5rem;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+  width: 200px;
+}
+
+.flora-slot--active {
+  background: #ecfeff;
+  border-color: #0891b2;
+}
+
+.flora-chip {
+  background: #dcfce7;
+  border: 1px solid #86efac;
+  border-radius: 999px;
+  color: #166534;
+  cursor: grab;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  text-transform: capitalize;
+  user-select: none;
+}
+
+.flora-chip:active {
+  cursor: grabbing;
+}
+
+.flora-reset {
+  background: #e2e8f0;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  color: #0f172a;
+  cursor: pointer;
+  font: inherit;
+  justify-self: start;
+  padding: 0.5rem 0.75rem;
+}
+
+@media (max-width: 560px) {
+  .flora-slots {
+    grid-template-columns: 1fr;
+  }
+}
+
+.progress-track {
+  grid-column: 1 / -1;
+  height: 25px;
+  border-radius: 999px;
+  background: #ead3b7;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #bb7a37, #e0a45f);
+  transition: width 120ms linear;
+}
+
+.toast-stack {
+  position: fixed;
+  top: 0.9rem;
+  right: 0.9rem;
+  display: grid;
+  gap: 0.45rem;
+  pointer-events: none;
+  z-index: 20;
+}

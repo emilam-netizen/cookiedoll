@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "target": "ES2022",
+    "useDefineForClassFields": true,
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "types": ["vite/client"],
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "erasableSyntaxOnly": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true
+  },
+  "include": [
+    "src/main.tsx",
+    "src/App.tsx",
+    "src/index.css",
+    "src/App.css",
+    "src/Child.tsx",
+    "src/ui/ItemTypes.ts",
+    "src/ui/Box.tsx",
+    "src/ui/Dustbin.tsx",
+    "src/ui/page-schedule.tsx",
+    "src/ui/selectionscreen.tsx",
+    "src/ui/sidemenu.tsx",
+    "src/ui/sideslots.tsx",
+    "src/ui/slot/DraggableChip.tsx",
+    "src/ui/slot/Slot.tsx",
+    "src/ui/slot/FloraSlotDemo.tsx"
+  ]
+}
