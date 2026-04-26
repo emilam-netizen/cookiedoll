@@ -92,7 +92,7 @@ const App = () => {
 
     //sidemenu
     //mainscreen
-    //selectionscreen
+    //selectionscreen ugh
 
     
 
