@@ -197,7 +197,9 @@ function CustomDragLayer({ enabled }: { enabled: boolean }) {
     currentOffset: monitor.getClientOffset(),
   }))
 
-  if (!enabled || !isDragging || !dragItem || !currentOffset) {
+  console.log('dragItem in doll: ', dragItem)
+
+  if (!enabled || !isDragging || !dragItem || !dragItem.item || !currentOffset) {
     return null
   }
 
