@@ -127,23 +127,22 @@ const SideSlots = ({instate, insetState, setSkill, removeSkill}:SideSlotProps) =
           }
           return(
             
-            <>
-            <Slot
-              key={slotId}
-              clearChip={clearChip}
-              placeChip={placeChip}
-              placedChip={getChipInSlot(slotId)}
-              registerSlotRef={registerSlotRef}
-              slotId={slotId}
-              slotRefs={slotRefs}
-            />
+            <React.Fragment key={slotId}>
+              <Slot
+                clearChip={clearChip}
+                placeChip={placeChip}
+                placedChip={getChipInSlot(slotId)}
+                registerSlotRef={registerSlotRef}
+                slotId={slotId}
+                slotRefs={slotRefs}
+              />
 
               <div className="progress-track" aria-hidden="true">
                 <div className="progress-fill" style={{ width: `${progressPercent}%` }} >
                    {progressPercent}
                 </div>
               </div>
-            </>
+            </React.Fragment>
         )})}
         {typeof(INITIAL_PLACEMENT)}
       </div>

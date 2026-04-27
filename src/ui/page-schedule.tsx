@@ -92,7 +92,7 @@ function PageSchedule({instate}: StatProps) {
       {updatedSkill.map((skill) => 
         
         placement[skill] === undefined ? (
-          <>
+          <React.Fragment key={skill}>
           <DraggableChip
             key={skill}
             isPlaced={false}
@@ -101,11 +101,11 @@ function PageSchedule({instate}: StatProps) {
             slotRefs={slotRefs}
           /> 
           
-          </>
+          </React.Fragment>
 
         ) : (
-          <>
-          {typeof(placement[skill])}</>
+          <React.Fragment key={skill}>
+          {typeof(placement[skill])}</React.Fragment>
         ),
       
       )
