@@ -94,7 +94,6 @@ function PageSchedule({instate}: StatProps) {
         placement[skill] === undefined ? (
           <React.Fragment key={skill}>
           <DraggableChip
-            key={skill}
             isPlaced={false}
             name={skill}
             onResetOutside={clearChip}
