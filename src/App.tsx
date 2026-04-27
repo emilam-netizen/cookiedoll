@@ -76,10 +76,6 @@ const App = () => {
     saveGameState(state);
   }, [state]);
 
-  useEffect(() => {
-    console.log('app mounted')
-  }, [])
-
 /*
   useEffect(() => {
     if (toasts.length === 0) {
