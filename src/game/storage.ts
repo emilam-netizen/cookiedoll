@@ -23,5 +23,8 @@ export function loadGameState(): GameState {
 export function saveGameState(state: GameState): void {
   const serialized = JSON.stringify(toSerializableState(state));
   window.localStorage.setItem(STORAGE_KEY, serialized);
+}
 
+export function clearGameState(): void {
+  window.localStorage.removeItem(STORAGE_KEY);
 }
