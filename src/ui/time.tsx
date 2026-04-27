@@ -48,6 +48,7 @@ const Time = ({ instate, insetState }: TimeProps) => {
   }
 
   useEffect(() => {
+    console.log('time mounted')
     let previousMs = Date.now();
 
     const applyElapsedTime = () => {

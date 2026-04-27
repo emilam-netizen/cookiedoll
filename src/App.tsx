@@ -14,7 +14,7 @@ import Reward from "./ui/Reward";
 import Doll from "./doll/doll"
 
 import type { GameState } from "./game/objects";
-import { loadGameState, saveGameState } from "./game/storage";
+import { clearGameState, loadGameState, saveGameState } from "./game/storage";
 import { SHOP_LIST, ITEM_LIST } from "./game/shop-list";
 
 
@@ -52,6 +52,11 @@ const App = () => {
           setMenuVal(childData);
         }   
   }
+
+  const handleClearSave = () => {
+    clearGameState();
+    setState(createInitialState());
+  }
   
   const itemBuyCallback = (itemId: string):void => {
     const item = ITEM_LIST.find((entry) => entry.id === itemId);
@@ -71,6 +76,9 @@ const App = () => {
     saveGameState(state);
   }, [state]);
 
+  useEffect(() => {
+    console.log('app mounted')
+  }, [])
 
 /*
   useEffect(() => {
@@ -126,6 +134,23 @@ const App = () => {
           <SelectionScreen screenVal={menuVal} itemBuyCallback={itemBuyCallback} instate={state}></SelectionScreen>
           <></>
           </div>
+          <button
+            onClick={handleClearSave}
+            style={{
+              position: 'fixed',
+              bottom: '20px',
+              right: '20px',
+              zIndex: 1000,
+              padding: '10px 14px',
+              backgroundColor: '#ff5c5c',
+              color: 'white',
+              border: 'none',
+              borderRadius: '8px',
+              cursor: 'pointer',
+            }}
+          >
+            RESET GAME
+          </button>
          
       </DndProvider>
     </div>
